@@ -43,12 +43,6 @@ const moviesController = {
     }, //Aqui dispongo las rutas para trabajar con el CRUD
     add: function (req, res) {
         res.render('moviesAdd');
-        /* Genres.findAll()
-        .then(allGenres =>
-            res.render('moviesAdd', {
-                allGenres
-            })
-        ) */
     },
     create: function (req,res) {
         const {
@@ -77,10 +71,7 @@ const moviesController = {
             res.render('moviesEdit', {
                 Movie
             });
-        })
-        /* const genresPromise = Genres.findAll();
-        const moviePromise = Movie.findByPk(req.params.id);
-        Promise.all([genresPromise, moviePromise]); */ 
+        });
     },
     update: function (req,res) {
         const {
